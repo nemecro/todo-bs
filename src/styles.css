@@ -46,6 +46,41 @@
     isolation: isolate;
   }
 
+:root {
+    --primary-bg: #f8f9fa;
+    --secondary-bg: #dee2e6;
+    --mid: #adb5bd;
+    --secondary-text: #495057;
+    --primary-text: #212529;
+}
+
+:root[data-theme='dark']{
+    --primary-text: #f8f9fa;
+    --secondary-text: #dee2e6;
+    --mid: #adb5bd;
+    --secondary-bg: #495057;
+    --primary-bg: #212529;
+}
+
 body {
     font-family: system-ui, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+body header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+#color-scheme-toggle {
+    background-color: transparent;
+    border: none;
 }
